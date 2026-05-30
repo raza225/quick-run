@@ -46,6 +46,7 @@
             color: #66fcf1;
             border-bottom: 1px solid #45f3ff;
             padding-bottom: 10px;
+            margin-top: 30px;
         }
         .features-list {
             text-align: left;
@@ -54,21 +55,34 @@
             font-size: 1.1rem;
             line-height: 1.8;
         }
-        .btn {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 35px;
-            font-size: 1.2rem;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
+        /* Pricing Cards Styling */
+        .pricing-table {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
             margin: 20px 0;
-            transition: 0.3s;
         }
-        .btn:hover {
-            background-color: #45a049;
-            box-shadow: 0 0 15px #4CAF50;
+        .price-card {
+            background: #0b0c10;
+            border: 1px solid #4CAF50;
+            border-radius: 8px;
+            padding: 15px;
+            width: 200px;
+            margin: 10px;
+        }
+        .price-card h3 { color: #fff; margin: 0; }
+        .price-card .cost { color: #66fcf1; font-size: 1.5rem; font-weight: bold; margin: 10px 0; }
+        
+        .legal-box {
+            text-align: left;
+            background: #11141a;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            max-height: 150px;
+            overflow-y: scroll;
+            margin: 15px 0;
+            border: 1px solid #333;
         }
         footer {
             margin-top: 60px;
@@ -89,7 +103,7 @@
     <header>
         <h1>Quick Run</h1>
         <p class="tagline">An Epic 2D Endless Runner Game</p>
-        <span style="background: #ff9800; color: #000; padding: 5px 15px; font-weight: bold; border-radius: 5px;">COMING SOON TO ANDROID</span>
+        <span style="background: #ff9800; color: #000; padding: 5px 15px; font-weight: bold; border-radius: 5px;">LIVE ON ANDROID SOON</span>
     </header>
 
     <div class="container">
@@ -101,18 +115,47 @@
             <li>⚡ <strong>Fast-Paced Gameplay:</strong> Test your reflexes with increasing speeds.</li>
             <li>🚗 <strong>Dynamic Obstacles:</strong> Dodge cars and unpredictable hurdles.</li>
             <li>🎮 <strong>Smooth Controls:</strong> Optimized mechanics built seamlessly in Unity.</li>
-            <li>🪙 <strong>In-Game Store:</strong> Purchase premium skins and upgrades securely using Crypto.</li>
+            <li>🪙 <strong>In-Game Store:</strong> Purchase premium skins securely using Crypto.</li>
         </ul>
 
-        <br>
-        <a href="#" class="btn">Pre-Register Now</a>
+        <h2>In-Game Store & Pricing</h2>
+        <p>You can securely purchase premium items using our integrated Cryptomus payment gateway:</p>
+        <div class="pricing-table">
+            <div class="price-card">
+                <h3>Starter Coin Pack</h3>
+                <div class="cost">$0.99</div>
+                <p>Get 500 Coins to unlock starter items.</p>
+            </div>
+            <div class="price-card">
+                <h3>Pro Runner Skin</h3>
+                <div class="cost">$2.99</div>
+                <p>Exclusive neon skin with speed traits.</p>
+            </div>
+            <div class="price-card">
+                <h3>Mega Bundle</h3>
+                <div class="cost">$4.99</div>
+                <p>2000 Coins + 2 Premium Skins included.</p>
+            </div>
+        </div>
+
+        <h2 id="privacy">Privacy Policy</h2>
+        <div class="legal-box">
+            <p><strong>Privacy Policy for Quick Run Digital</strong><br>
+            At Quick Run, we respect your privacy. We do not collect personal identifiable information. Any in-game data, high scores, or coin balances are saved locally on your device or handled securely through third-party processors like Cryptomus for payment transactions. No payment data or wallet keys are stored on our servers.</p>
+        </div>
+
+        <h2 id="terms">Terms of Service</h2>
+        <div class="legal-box">
+            <p><strong>Terms of Service for Quick Run Digital</strong><br>
+            By playing Quick Run, you agree to use the application fairly. Any modifications, hacks, or exploitation of the game's currency system are prohibited. All virtual purchases made via Cryptomus are final and non-refundable. We reserve the right to update game features and pricing plans at any time.</p>
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2026 Quick Run Digital. All Rights Reserved.</p>
         <p>
-            <a href="#">Privacy Policy</a> | 
-            <a href="#">Terms of Service</a> | 
+            <a href="#privacy">Privacy Policy</a> | 
+            <a href="#terms">Terms of Service</a> | 
             <a href="mailto:support@quickrundigital.com">Contact Support</a>
         </p>
     </footer>
